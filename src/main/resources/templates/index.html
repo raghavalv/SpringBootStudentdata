@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+    <title>Student Details Display</title>
+</head>
+<body>
+<div>
+    <h1 style="background-color: blue; color: white;"><strong>Student Details Display</strong></h1>
+   
+  <tr>
+    <br><br>
+    <div class="col-sm-5" align="center">
+        <div class="panel-body" align="center">
+            <table class="table" style="border-collapse: collapse; width: 100%; border: 1px solid black;">
+                <thead class="thead-dark" style="background-color: #f2f2f2;">
+                    <tr>
+                        <th style="border: 1px solid black; padding: 8px;">Student ID</th>
+                        <th style="border: 1px solid black; padding: 8px;">Student Name</th>
+                        <th style="border: 1px solid black; padding: 8px;">Email</th>
+                        <th style="border: 1px solid black; padding: 8px;">State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="student : ${liststudent}">
+                        <td style="border: 1px solid black; padding: 8px;" th:text="${student.id}">Student ID</td>
+                        <td style="border: 1px solid black; padding: 8px;" th:text="${student.studentname}">Student Name</td>
+                        <td style="border: 1px solid black; padding: 8px;" th:text="${student.email}">Email</td>
+                        <td style="border: 1px solid black; padding: 8px;" th:text="${student.state}">State</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</tr>
+    </tbody>
+    </table>
+    <div>
+</body>
+</html>
